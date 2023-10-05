@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Swoop Test Suite" parallel="tests">
+    <test name="Regression1">
+        <groups>
+            <run>
+                <include name="Regression1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestSwoop">
+                <methods>
+                    <include name="testRestPage"/>
+                    <include name="testFoodPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Regression2">
+        <groups>
+            <run>
+                <include name="Regression2"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestSwoop">
+                <methods>
+                    <include name="testSortSushi"/>
+                    <include name="testShare"/>
+                    <include name="testDataBase"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
